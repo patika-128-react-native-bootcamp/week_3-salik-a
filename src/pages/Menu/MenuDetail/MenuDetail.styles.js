@@ -6,20 +6,24 @@ export default StyleSheet.create({
     borderWidth: 1,
     margin: 10,
     padding: 10,
+
   },
   label: {
     color: '#8d8d8d',
     fontSize: 12,
     marginVertical: 5,
+    flexWrap: "wrap"
   },
   ingredients: {
     flexDirection: 'row',
+    flexWrap: "wrap"
   },
   badge_container: {
     backgroundColor: '#37474f',
     margin: 3,
     borderRadius: 10,
     padding: 5,
+
   },
   badge_label: {
     fontSize: 10,

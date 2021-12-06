@@ -21,7 +21,8 @@ export default function TableUpdate() {
 
   const {price: total} = table.orders.reduce((p, c) => ({
     price: p.price + c.price,
-  }));
+  }),
+    { price: 0 });
 
   function handleCloseTable() {
     navigation.navigate('TablesPage', {
@@ -33,7 +34,7 @@ export default function TableUpdate() {
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <Text style={styles.name_label}>{table.name}</Text>
-        {table.orders.map(mapOrders)}
+        {table.orders.length > 0 ? (table.orders.map(mapOrders)) : (<Text style={styles.name_label}>Table is Empty</Text>)}
         <Text style={styles.total}>Total {total} TL</Text>
       </View>
       {table.isActive && (
