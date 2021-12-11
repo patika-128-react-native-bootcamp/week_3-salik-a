@@ -18,7 +18,7 @@ export default function Navigation() {
           component={ProductsStack}
           options={{
             drawerLabel: 'Products',
-            drawerIcon: ({size, color}) => (
+            drawerIcon: ({ size, color, focused }) => (
               <Icon name="food-croissant" color={color} size={size} />
             ),
             drawerActiveTintColor: '#ab47bc',

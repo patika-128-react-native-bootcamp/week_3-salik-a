@@ -8,7 +8,7 @@ export default function Products() {
   const navigation = useNavigation();
 
   function navigate(selectedProduct) {
-    navigation.navigate('PrdctDtlPage', {product: selectedProduct});
+    navigation.navigate('ProductDetailPage', { product: selectedProduct });
   }
 
   return (
